@@ -26,7 +26,7 @@
 <form>
 <p>Choose weather timezone of 1st window.</p>
 <p>
-<select id="weather1" size="1">
+<select id="weather1" size="2">
 	<option value="0" selected>now</option>
 	<option value="1">+3h</option>
 	<option value="2">+6h</option>
@@ -48,8 +48,8 @@
 </p>
 <p>Choose weather timezone of 2nd window.</p>
 <p>
-<select id="weather2" size="1">
-	<option value="0" selected>none</option>
+<select id="weather2" size="2">
+	<option value="0" selected>now</option>
 	<option value="1">+3h</option>
 	<option value="2">+6h</option>
 	<option value="3">+9h</option>
@@ -70,7 +70,7 @@
 </p>
 <p>Choose weather timezone of 3rd window.</p>
 <p>
-<select id="weather3" size="1">
+<select id="weather3" size="2">
 	<option value="0" selected>none</option>
 	<option value="1">+3h</option>
 	<option value="2">+6h</option>
@@ -92,7 +92,7 @@
 </p>
 <p>Choose weather timezone of 4th window.</p>
 <p>
-<select id="weather4" size="1">
+<select id="weather4" size="2">
 	<option value="0" selected>none</option>
 	<option value="1">+3h</option>
 	<option value="2">+6h</option>
@@ -133,10 +133,12 @@
 <script>
 
 function saveOptions() {
-	var colorValue = parseInt($('#color').val());
-	var weatherValue = parseInt($('#weather').val());
 	var tempValue = parseInt($('#temp').val());
-	var sendValue =[colorValue,weatherValue,tempValue];
+	var weather1Value = parseInt($('#weather1').val());
+	var weather2Value = parseInt($('#weather2').val());
+	var weather3Value = parseInt($('#weather3').val());
+	var weather4Value = parseInt($('#weather4').val());
+	var sendValue =[tempValue,,weather1Value,weather2Value,weather3Value,weather4Value];
 <!--alert(sendValue);-->	
 	return sendValue;
 }
