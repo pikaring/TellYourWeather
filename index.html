@@ -27,8 +27,7 @@
 <p>Choose weather timezone of 1st window.</p>
 <p>
 <select id="weather1" size="4">
-	<option value="0" selected>now</option>
-	<option value="1">+3h</option>
+	<option value="1" selected>+3h</option>
 	<option value="2">+6h</option>
 	<option value="3">+9h</option>
 	<option value="4">+12h</option>
@@ -49,9 +48,8 @@
 <p>Choose weather timezone of 2nd window.</p>
 <p>
 <select id="weather2" size="4">
-	<option value="0" selected>now</option>
 	<option value="1">+3h</option>
-	<option value="2">+6h</option>
+	<option value="2" selected>+6h</option>
 	<option value="3">+9h</option>
 	<option value="4">+12h</option>
 	<option value="5">+15h</option>
@@ -71,10 +69,9 @@
 <p>Choose weather timezone of 3rd window.</p>
 <p>
 <select id="weather3" size="4">
-	<option value="0" selected>none</option>
 	<option value="1">+3h</option>
 	<option value="2">+6h</option>
-	<option value="3">+9h</option>
+	<option value="3" selected>+9h</option>
 	<option value="4">+12h</option>
 	<option value="5">+15h</option>
 	<option value="6">+18h</option>
@@ -91,27 +88,6 @@
 </select>
 </p>
 <p>Choose weather timezone of 4th window.</p>
-<p>
-<select id="weather4" size="4">
-	<option value="0" selected>none</option>
-	<option value="1">+3h</option>
-	<option value="2">+6h</option>
-	<option value="3">+9h</option>
-	<option value="4">+12h</option>
-	<option value="5">+15h</option>
-	<option value="6">+18h</option>
-	<option value="7">+21h</option>
-	<option value="8">+24h</option>
-	<option value="9">+27h</option>
-	<option value="10">+30h</option>
-	<option value="11">+33h</option>
-	<option value="12">+36h</option>
-	<option value="13">+39h</option>
-	<option value="14">+42h</option>
-	<option value="15">+45h</option>
-	<option value="16">+48h</option>
-</select>
-</p>
 
 <p>Celsius/Fahrenheit</p>
 <p>
@@ -134,11 +110,10 @@
 
 function saveOptions() {
 	var tempValue = parseInt($('#temp').val());
-	var weather1Value = parseInt($('#weather1').val());
-	var weather2Value = parseInt($('#weather2').val());
-	var weather3Value = parseInt($('#weather3').val());
-	var weather4Value = parseInt($('#weather4').val());
-	var sendValue =[tempValue,,weather1Value,weather2Value,weather3Value,weather4Value];
+	var weatherValue_1 = parseInt($('#weather1').val());
+	var weatherValue_2 = parseInt($('#weather2').val());
+	var weatherValue_3 = parseInt($('#weather3').val());
+	var sendValue =[tempValue,,weatherValue_1,weatherValue_2,weatherValue_3];
 <!--alert(sendValue);-->	
 	return sendValue;
 }
