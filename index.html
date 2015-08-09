@@ -107,11 +107,11 @@
 <script>
 
 function saveOptions() {
-	var tempValue = parseInt($('#temp').val());
 	var weatherValue_1 = parseInt($('#weather1').val());
 	var weatherValue_2 = parseInt($('#weather2').val());
 	var weatherValue_3 = parseInt($('#weather3').val());
-	var sendValue =[tempValue,weatherValue_1,weatherValue_2,weatherValue_3];
+	var tempValue = parseInt($('#temp').val());
+	var sendValue =[weatherValue_1,weatherValue_2,weatherValue_3,tempValue];
 <!--alert(sendValue);-->	
 	return sendValue;
 }
